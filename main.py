@@ -8,10 +8,10 @@ app = Flask(__name__)
 account1balance = 0
 account1availablebalance = 1
 
-account2balance = "20"
-account2availablebalance = '20'
+account2balance = 20
+account2availablebalance = 20
 
-@app.route("/balance/<str:accountnumber>", methods = ['POST', 'GET'])
+@app.route("/balance/<string:accountnumber>", methods = ['POST', 'GET'])
 def balance(accountnumber):
     if accountnumber == "first account":
         return jsonify(
